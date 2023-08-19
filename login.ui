@@ -15,7 +15,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QWidget" name="title_wedget" native="true"/>
+    <widget class="TitleWedget" name="title_wedget" native="true"/>
    </item>
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
@@ -25,6 +25,14 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TitleWedget</class>
+   <extends>QWidget</extends>
+   <header location="global">titlewedget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

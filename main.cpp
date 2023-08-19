@@ -5,13 +5,16 @@
     > Created Time: 2023-08-17 17:35:11
 ************************************************************************/
 
-#include "mainwindow.h"
 #include <QApplication>
+#include "mainwindow.h"
+#include "login.h"
 
 int main(int argc, char *argv[]) {
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
-    return a.exec();
+    QApplication app(argc, argv);
+//    MainWindow w;
+//    w.show();
+    Login login;
+    login.show();
+    return app.exec();
 }
 

@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/img/close.png</file>
+        <file>res/img/minimal.png</file>
+        <file>res/img/setting.png</file>
+        <file>res/img/tile_file.png</file>
+        <file>res/img/tile_hot.png</file>
+        <file>res/img/title_change.png</file>
+        <file>res/img/title_data.png</file>
+        <file>res/img/title_max.png</file>
+        <file>res/img/title_normal.png</file>
+        <file>res/img/title_share.png</file>
+        <file>res/img/title_user.png</file>
+        <file>res/img/top1.png</file>
+        <file>res/img/top2.png</file>
+        <file>res/img/top3.png</file>
+        <file>res/img/upload.png</file>
+        <file>res/img/YunDisk.png</file>
+    </qresource>
+</RCC>

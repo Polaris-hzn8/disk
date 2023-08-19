@@ -19,11 +19,13 @@ SOURCES += \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
+    mypushbutton.cpp \
     titlewedget.cpp
 
 HEADERS += \
     login.h \
     mainwindow.h \
+    mypushbutton.h \
     titlewedget.h
 
 FORMS += \
@@ -35,3 +37,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    res.qrc
