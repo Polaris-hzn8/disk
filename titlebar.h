@@ -11,16 +11,16 @@
 #include <QWidget>
 
 namespace Ui {
-class TitleWedget;
+class TitleBar;
 }
 
-class TitleWedget : public QWidget {
+class TitleBar : public QWidget {
     Q_OBJECT
 public:
-    explicit TitleWedget(QWidget *parent = nullptr);
-    ~TitleWedget();
+    explicit TitleBar(QWidget *parent = nullptr);
+    ~TitleBar();
 private:
-    Ui::TitleWedget *ui;
+    Ui::TitleBar *ui;
 };
 
 #endif // TITLEWEDGET_H

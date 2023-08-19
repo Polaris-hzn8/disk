@@ -12,16 +12,16 @@
 #include <QPainter>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+namespace Ui { class MainPanel; }
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow {
+class MainPanel : public QMainWindow {
     Q_OBJECT
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    MainPanel(QWidget *parent = nullptr);
+    ~MainPanel();
 private:
-    Ui::MainWindow *ui;
+    Ui::MainPanel *ui;
 };
 
 #endif // MAINWINDOW_H

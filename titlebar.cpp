@@ -5,15 +5,16 @@
     > Created Time: 2023-08-17 17:55:51
 ************************************************************************/
 
-#include "titlewedget.h"
-#include "ui_titlewedget.h"
+#include "config.h"
+#include "titlebar.h"
+#include "ui_titlebar.h"
 
-TitleWedget::TitleWedget(QWidget *parent):QWidget(parent), ui(new Ui::TitleWedget) {
+TitleBar::TitleBar(QWidget *parent):QWidget(parent), ui(new Ui::TitleBar) {
     //logo
     ui->setupUi(this);
-    QPixmap logo = QPixmap(":/res/img/YunDisk.png").scaled(40, 30);
+    QPixmap logo = QPixmap(APP_LOGO_PATH).scaledToWidth(40);
     ui->logo->setPixmap(logo);
-    ui->logo->setFixedSize(logo.width()+8, logo.height());
+    ui->logo->setFixedSize(logo.width(), logo.height());
     //text
     QFont font;
     font.setFamily("JetBrains Mono");
@@ -21,10 +22,9 @@ TitleWedget::TitleWedget(QWidget *parent):QWidget(parent), ui(new Ui::TitleWedge
     ui->text->setFont(font);
     ui->text->setText("YunDisk");
     ui->text->setFixedSize(100, logo.height());
-    ui->text->setAlignment(Qt::AlignLeft|Qt::AlignBottom);
-
+    ui->text->setAlignment(Qt::AlignLeft|Qt::AlignCenter);
 }
 
-TitleWedget::~TitleWedget() {
+TitleBar::~TitleBar() {
     delete ui;
 }

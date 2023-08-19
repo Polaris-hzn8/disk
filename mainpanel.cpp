@@ -5,17 +5,14 @@
     > Created Time: 2023-08-17 17:35:19
 ************************************************************************/
 
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include "mypushbutton.h"
-#include <QFontDatabase>
+#include "mainpanel.h"
+#include "ui_mainpanel.h"
 
-MainWindow::MainWindow(QWidget *parent):QMainWindow(parent), ui(new Ui::MainWindow) {
+MainPanel::MainPanel(QWidget *parent):QMainWindow(parent), ui(new Ui::MainPanel) {
     ui->setupUi(this);
-
 }
 
-MainWindow::~MainWindow() {
+MainPanel::~MainPanel() {
     delete ui;
 }
 

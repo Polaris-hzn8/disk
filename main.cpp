@@ -6,15 +6,12 @@
 ************************************************************************/
 
 #include <QApplication>
-#include "mainwindow.h"
-#include "login.h"
+#include "loginPanel.h"
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
-//    MainWindow w;
-//    w.show();
-    Login login;
-    login.show();
+    LoginPanel loginpanel;
+    loginpanel.show();
     return app.exec();
 }
 

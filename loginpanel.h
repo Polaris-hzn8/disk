@@ -11,16 +11,19 @@
 #include <QDialog>
 
 namespace Ui {
-class Login;
+class LoginPanel;
 }
 
-class Login : public QDialog {
+class LoginPanel : public QDialog {
     Q_OBJECT
 public:
-    explicit Login(QWidget *parent = nullptr);
-    ~Login();
+    explicit LoginPanel(QWidget *parent = nullptr);
+    ~LoginPanel();
+
+protected:
+    void paintEvent(QPaintEvent *e);//绘制窗口图像
 private:
-    Ui::Login *ui;
+    Ui::LoginPanel *ui;
 };
 
 #endif // LOGIN_H

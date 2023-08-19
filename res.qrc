@@ -16,5 +16,7 @@
         <file>res/img/top3.png</file>
         <file>res/img/upload.png</file>
         <file>res/img/YunDisk.png</file>
+        <file>res/img/YunDisk32.png</file>
+        <file>res/img/login_bg.png</file>
     </qresource>
 </RCC>
