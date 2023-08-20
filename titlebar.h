@@ -17,11 +17,18 @@ class TitleBar;
 class TitleBar : public QWidget {
     Q_OBJECT
 public:
-    explicit TitleBar(QWidget *parent = nullptr);
+    explicit TitleBar(QWidget* parent = nullptr);
     ~TitleBar();
+    void paintEvent(QPaintEvent* e); //绘制窗口图像
+
+protected:
+    void mouseMoveEvent(QMouseEvent* e);
+    void mousePressEvent(QMouseEvent* e);
+
 private:
-    Ui::TitleBar *ui;
+    Ui::TitleBar* ui;
+    QPoint _dist; //差值 鼠标当前位置 - 窗口左上角点
+    QWidget* _parent; //TitleBar的窗口类
 };
 
 #endif // TITLEWEDGET_H
-

@@ -5,31 +5,34 @@
     > Created Time: 2023-08-17 17:35:03
 ************************************************************************/
 
-#include <QGraphicsDropShadowEffect>
+#include "loginpanel.h"
+#include "config.h"
 #include <QIcon>
 #include <QPainter>
-#include "config.h"
-#include "loginpanel.h"
-#include "ui_loginpanel.h"
+#include <ui_loginpanel.h>
 
-LoginPanel::LoginPanel(QWidget *parent):QDialog(parent), ui(new Ui::LoginPanel) {
+LoginPanel::LoginPanel(QWidget* parent)
+    : QDialog(parent)
+    , ui(new Ui::LoginPanel)
+{
     ui->setupUi(this);
+    setWindowFlags(Qt::FramelessWindowHint | windowFlags()); //去掉边框
     setWindowTitle("YunDisk");
     setFixedSize(800, 500);
-    setWindowFlags(Qt::FramelessWindowHint|windowFlags());
     setWindowIcon(QIcon(APP_ICON_PATH));
     QFont font;
     font.setFamily("Microsoft YaHei");
     setFont(font);
 }
 
-void LoginPanel::paintEvent(QPaintEvent *e) {
+void LoginPanel::paintEvent(QPaintEvent* e)
+{
     //绘制登录窗口的背景图
     QPainter painter(this);
-    QPixmap loginBg = QPixmap(BG_LOGIN_PATH);
-    painter.drawPixmap(0, 0, width(), height(), loginBg);
+    painter.drawPixmap(0, 0, width(), height(), QPixmap(BASIC_BG_PATH));
 }
 
-LoginPanel::~LoginPanel() {
+LoginPanel::~LoginPanel()
+{
     delete ui;
 }

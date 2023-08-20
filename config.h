@@ -13,7 +13,7 @@
 #define APP_ICON_PATH ":/res/img/YunDisk32.png"
 
 /**************** 应用背景图片配置 *************/
-#define BG_LOGIN_PATH ":/res/img/login_bg.png"
-
+#define BASIC_BG_PATH ":/res/img/basicbg.png"
+#define TITLE_BAR_PATH ":/res/img/titleBar.png"
 
 #endif // CONFIG_H

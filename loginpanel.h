@@ -17,13 +17,13 @@ class LoginPanel;
 class LoginPanel : public QDialog {
     Q_OBJECT
 public:
-    explicit LoginPanel(QWidget *parent = nullptr);
+    explicit LoginPanel(QWidget* parent = nullptr);
     ~LoginPanel();
 
 protected:
-    void paintEvent(QPaintEvent *e);//绘制窗口图像
+    void paintEvent(QPaintEvent* e); //绘制窗口图像
 private:
-    Ui::LoginPanel *ui;
+    Ui::LoginPanel* ui;
 };
 
 #endif // LOGIN_H

@@ -19,14 +19,12 @@ SOURCES += \
     loginpanel.cpp \
     main.cpp \
     mainpanel.cpp \
-    mypushbutton.cpp \
     titlebar.cpp
 
 HEADERS += \
     config.h \
     loginpanel.h \
     mainpanel.h \
-    mypushbutton.h \
     titlebar.h
 
 FORMS += \

@@ -5,13 +5,13 @@
     > Created Time: 2023-08-17 17:35:11
 ************************************************************************/
 
+#include "loginpanel.h"
 #include <QApplication>
-#include "loginPanel.h"
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[])
+{
     QApplication app(argc, argv);
     LoginPanel loginpanel;
     loginpanel.show();
     return app.exec();
 }
-

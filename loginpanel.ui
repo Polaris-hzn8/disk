@@ -14,11 +14,51 @@
    <string>Dialog</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
    <item>
-    <widget class="TitleBar" name="title_wedget" native="true"/>
+    <widget class="TitleBar" name="titleBar" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>65</verstretch>
+      </sizepolicy>
+     </property>
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
      </property>
@@ -34,14 +74,32 @@
      <widget class="QWidget" name="login_page">
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
-        <spacer name="verticalSpacer_1">
+        <widget class="QToolButton" name="regisBtn">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(170, 170, 255);
+font: 25 9pt &quot;Microsoft YaHei&quot;;
+text-decoration: underline;</string>
+         </property>
+         <property name="text">
+          <string>Don't have an account? click here</string>
+         </property>
+         <property name="autoRaise">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_4">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
-           <height>67</height>
+           <height>10</height>
           </size>
          </property>
         </spacer>
@@ -92,7 +150,7 @@
                <property name="sizeHint" stdset="0">
                 <size>
                  <width>20</width>
-                 <height>30</height>
+                 <height>20</height>
                 </size>
                </property>
               </spacer>
@@ -100,37 +158,6 @@
              <item>
               <widget class="QWidget" name="infoArea" native="true">
                <layout class="QGridLayout" name="gridLayout">
-                <item row="2" column="2">
-                 <widget class="QLineEdit" name="pwd_lineEdit">
-                  <property name="echoMode">
-                   <enum>QLineEdit::Password</enum>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="0">
-                 <widget class="QLabel" name="uid">
-                  <property name="text">
-                   <string>yunid:</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="2">
-                 <widget class="QLineEdit" name="uid_lineEdit">
-                  <property name="alignment">
-                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="0">
-                 <widget class="QLabel" name="pwd">
-                  <property name="text">
-                   <string>passwd:</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="1" column="2">
                  <spacer name="verticalSpacer">
                   <property name="orientation">
@@ -146,6 +173,20 @@
                    </size>
                   </property>
                  </spacer>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="uid">
+                  <property name="text">
+                   <string>yunid:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QLineEdit" name="uid_lineEdit">
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
                 </item>
                 <item row="0" column="1">
                  <spacer name="horizontalSpacer">
@@ -163,39 +204,41 @@
                   </property>
                  </spacer>
                 </item>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QWidget" name="checkboxArea" native="true">
-               <layout class="QHBoxLayout" name="horizontalLayout">
-                <item>
-                 <widget class="QCheckBox" name="checkBox_2">
+                <item row="2" column="0">
+                 <widget class="QLabel" name="pwd">
                   <property name="text">
-                   <string>auto login</string>
+                   <string>passwd:</string>
                   </property>
                  </widget>
                 </item>
-                <item>
-                 <widget class="QCheckBox" name="checkBox_1">
-                  <property name="text">
-                   <string>remember passwd</string>
+                <item row="2" column="2">
+                 <widget class="QLineEdit" name="pwd_lineEdit">
+                  <property name="echoMode">
+                   <enum>QLineEdit::Password</enum>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
-                <item>
-                 <widget class="QToolButton" name="regisBtn">
-                  <property name="styleSheet">
-                   <string notr="true">color: rgb(170, 170, 255);
-font: 25 9pt &quot;Microsoft YaHei&quot;;
-text-decoration: underline;</string>
-                  </property>
-                  <property name="text">
-                   <string>Don't have an account? click here</string>
-                  </property>
-                  <property name="autoRaise">
-                   <bool>true</bool>
-                  </property>
+                <item row="3" column="2">
+                 <widget class="QWidget" name="checkboxArea" native="true">
+                  <layout class="QHBoxLayout" name="horizontalLayout">
+                   <item>
+                    <widget class="QCheckBox" name="checkBox_2">
+                     <property name="text">
+                      <string>auto login</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="checkBox_1">
+                     <property name="text">
+                      <string>remember passwd</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </widget>
                 </item>
                </layout>
