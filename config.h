@@ -21,7 +21,7 @@
 #define SETTING_BG_PATH ":/res/img/settingbg.png"
 
 // 文件路径
-const QString CONFFILE = "conf/cfg.json"; // 配置文件
+const QString CONFFILE = "conf/conf.json"; // 配置文件
 const QString RECORDDIR = "conf/record/"; // 用户文件上传下载记录
 const QString FILETYPEDIR = "conf/fileType"; // 存放文件类型图片目录
 

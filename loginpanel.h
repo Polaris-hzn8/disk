@@ -25,6 +25,9 @@ protected:
     void paintEvent(QPaintEvent* e); //绘制窗口图像
 private slots:
     void on_submitBtn_clicked();
+    void on_loginBtn_clicked();
+    void on_confsaveBtn_clicked();
+    void on_settingBtn_clicked();
 
 private:
     Ui::LoginPanel* ui;
