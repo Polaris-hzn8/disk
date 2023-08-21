@@ -7,7 +7,6 @@
 
 #ifndef TITLEWEDGET_H
 #define TITLEWEDGET_H
-
 #include <QWidget>
 
 namespace Ui {
@@ -20,7 +19,6 @@ public:
     explicit TitleBar(QWidget* parent = nullptr);
     ~TitleBar();
     void paintEvent(QPaintEvent* e); //绘制窗口图像
-
 protected:
     void mouseMoveEvent(QMouseEvent* e);
     void mousePressEvent(QMouseEvent* e);
@@ -29,6 +27,9 @@ private:
     Ui::TitleBar* ui;
     QPoint _dist; //差值 鼠标当前位置 - 窗口左上角点
     QWidget* _parent; //TitleBar的窗口类
+signals:
+    //自定义信号
+    void showSettingPanel();
 };
 
 #endif // TITLEWEDGET_H

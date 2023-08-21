@@ -19,11 +19,16 @@ class LoginPanel : public QDialog {
 public:
     explicit LoginPanel(QWidget* parent = nullptr);
     ~LoginPanel();
+    void initSetShadow(QDialog* dialog);
 
 protected:
     void paintEvent(QPaintEvent* e); //绘制窗口图像
+private slots:
+    void on_submitBtn_clicked();
+
 private:
     Ui::LoginPanel* ui;
+    QPixmap _background;
 };
 
 #endif // LOGIN_H

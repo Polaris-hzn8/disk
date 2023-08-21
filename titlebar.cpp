@@ -11,6 +11,7 @@
 #include <QDebug>
 #include <QMouseEvent>
 #include <QPainter>
+#include <QPushButton>
 
 TitleBar::TitleBar(QWidget* parent)
     : QWidget(parent)
@@ -31,6 +32,18 @@ TitleBar::TitleBar(QWidget* parent)
     ui->text->setText("YunDisk");
     ui->text->setFixedSize(100, logo.height());
     ui->text->setAlignment(Qt::AlignLeft | Qt::AlignCenter);
+    //settingBtn
+    connect(ui->settingBtn, &QPushButton::clicked, this, [=]() {
+        emit showSettingPanel();
+    });
+    //minimalBtn
+    connect(ui->minimalBtn, &QPushButton::clicked, this, [=]() {
+        parentWidget()->showMinimized();
+    });
+    //closeBtn
+    connect(ui->closeBtn, &QPushButton::clicked, this, [=]() {
+        this->parentWidget()->close();
+    });
 }
 
 void TitleBar::mouseMoveEvent(QMouseEvent* e)
